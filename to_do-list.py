@@ -3,7 +3,6 @@ tasks = []
 def show_menu():
     print("To do list \n1- Add task \n2- View tasks \n3- Mark task as done \n4- Delete task \n5- Close app")
     options = list(range(1,6))
-
     while True:
         while True:
             try:
@@ -25,6 +24,7 @@ def show_menu():
         elif action == 5:
             print("Closing program...")
             break
+        
         show_menu()
         break
 
