@@ -1,7 +1,10 @@
-tasks = []
+tasks = {"tk1": "X",
+         "tk2": "X",
+         "tk3": "X",
+        }
 
 def show_menu():
-    print("To do list \n1- Add task \n2- View tasks \n3- Mark task as done \n4- Delete task \n5- Close app")
+    print("\nMenu \n1- Add task \n2- View tasks \n3- Mark task as done \n4- Delete task \n5- Close app")
     options = list(range(1,6))
     while True:
         while True:
@@ -29,15 +32,30 @@ def show_menu():
         break
 
 def add_task():
-    print("Adding task...\n")
+    task = input("Task: ")
+    tasks[task] = "X"
 
 def view_task():
-    print("Viewing task...\n")
+    print("To-do list")
+    for task in tasks:
+        print(f"{task}: {tasks[task]}")
 
 def task_done():
-    print("Setting task as done...\n")
+    while True:
+        try:
+            task = input("Completed task: ")
+            tasks[task] = "✓"
+            break
+        except KeyError:
+            print("Task not found")
 
 def delete_task():
-    print("Deleting task...\n")
+    while True:
+        try:
+            task = input("Task to delete: ")
+            del tasks[task]
+            break
+        except KeyError:
+            print("Task not found")
 
 show_menu()
