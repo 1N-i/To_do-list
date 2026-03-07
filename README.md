@@ -10,7 +10,6 @@ A simple and efficient command-line interface (CLI) application to manage your d
 - [Project Architecture](#-project-architecture)
 - [What I Learned](#-what-i-learned)
 - [Future Improvements](#-future-improvements)
-- [How to Run](#-how-to-run)
 
 ---
 
@@ -37,10 +36,3 @@ The project is contained within a single optimized script:
 * [ ] **Data Persistence:** Save tasks to a `.txt` or `.json` file so they aren't lost when closing the app.
 * [ ] **Due Dates:** Add the ability to set deadlines for each task.
 * [ ] **Priority Levels:** Categorize tasks as High, Medium, or Low priority.
-
-## 🚀 How to Run
-
-**Clone the repository:**
-   ```bash 
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-   cd YOUR_REPO_NAME
