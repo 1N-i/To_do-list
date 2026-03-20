@@ -1,6 +1,4 @@
 import tkinter as tk
-from tkinter import messagebox
-
 
 class App:
     def __init__(self, root):
@@ -26,6 +24,26 @@ class App:
         input_frame = tk.Frame(self.root, bg = "#f0f4f7")
         input_frame.pack(pady = 10)
 
+        self.task_entry = tk.Entry(
+            input_frame,
+            font = ("Helvetica", 12),
+            width = 30
+        )
+        self.task_entry.pack(side = "left", padx = (0, 10))
+
+        add_button = tk.Button(
+            input_frame,
+            text = "Add task",
+            font = ("Helvetica", 11, "bold"),
+            bg = "#27ae60",
+            fg = "white",
+            padx = 10,
+            command = self.add_task
+        )
+        add_button.pack(side = "left")
+
+    
+
     def empty_tasks(self):
         pass
 
@@ -40,3 +58,8 @@ class App:
 
     def delete_task(self):
         pass
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = App(root)
+    root.mainloop()
